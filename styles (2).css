@@ -1,0 +1,101 @@
+/* ====== Custom Style untuk Portfolio ====== */
+
+/* Animasi hover pada gambar */
+img.rounded-lg {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.rounded-lg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Navbar sticky biar selalu di atas */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Efek hover link navbar */
+header nav a {
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #1d4ed8; /* biru Tailwind */
+}
+
+/* Section judul */
+section h2 {
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #1d4ed8;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Tombol kontak */
+#contact a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* ====== DARK MODE ====== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a; /* abu gelap */
+    color: #e2e8f0; /* teks abu terang */
+  }
+
+  header {
+    background-color: #1e293b; /* dark navy */
+    color: #e2e8f0;
+  }
+
+  header nav a {
+    color: #cbd5e1;
+  }
+
+  header nav a:hover {
+    color: #38bdf8; /* biru terang */
+  }
+
+  section {
+    background-color: transparent;
+  }
+
+  #certificates, #contact {
+    background-color: #1e293b;
+  }
+
+  .bg-gray-50 {
+    background-color: #334155 !important;
+  }
+
+  .bg-white {
+    background-color: #1e293b !important;
+  }
+
+  footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+  }
+}
